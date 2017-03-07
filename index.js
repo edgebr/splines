@@ -1,4 +1,26 @@
+/**
+ * by George MacKerron, mackerron.com
+ *
+ * Monotonic Cubic Spline:
+ *
+ *  adapted from:
+ *     http://sourceforge.net/mailarchive/forum.php?thread_name=EC90C5C6-C982-4F49-8D46-A64F270C5247%40gmail.com&forum_name=matplotlib-users
+ *     (easier to read at http://old.nabble.com/%22Piecewise-Cubic-Hermite-Interpolating-Polynomial%22-in-python-td25204843.html)
+ *
+ *  with help from:
+ *      F N Fritsch & R E Carlson (1980) 'Monotone Piecewise Cubic Interpolation', SIAM Journal of Numerical Analysis 17(2), 238 - 246.
+ *      http://en.wikipedia.org/wiki/Monotone_cubic_interpolation
+ *      http://en.wikipedia.org/wiki/Cubic_Hermite_spline
+ *
+ *
+ *  Natural and Clamped:
+ *
+ *  adapted from:
+ *      http://www.michonline.com/ryan/csc/m510/splinepresent.html
+ **/
+
 var CubicSpline, MonotonicCubicSpline;
+
 
 MonotonicCubicSpline = function () {
     function MonotonicCubicSpline(x, y) {
@@ -86,6 +108,8 @@ MonotonicCubicSpline = function () {
 
     return MonotonicCubicSpline;
 }();
+
+
 CubicSpline = function () {
     function CubicSpline(x, a, d0, dn) {
 
@@ -209,7 +233,7 @@ CubicSpline = function () {
     return CubicSpline;
 }();
 
-module.exports {
+module.exports = {
     CubicSpline: CubicSpline,
     MonotonicCubicSpline: MonotonicCubicSpline
-}
+};
