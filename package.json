@@ -1,0 +1,8 @@
+{
+  "name": "splines",
+  "version": "1.0.0",
+  "description": "George MacKerron (mackerron.com) implementation of monotonic cubic e natural cubic splines.",
+  "main": "index.js",
+  "author": "George MacKerron",
+  "license": "MIT"
+}
